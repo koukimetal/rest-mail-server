@@ -1,0 +1,25 @@
+{
+  "name": "rest-mail-server",
+  "version": "1.0.0",
+  "description": "Server to send email",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "setup": "node src/setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koukimetal/rest-mail-server.git"
+  },
+  "author": "comcometal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koukimetal/rest-mail-server/issues"
+  },
+  "homepage": "https://github.com/koukimetal/rest-mail-server#readme",
+  "dependencies": {
+    "googleapis": "^27.0.0",
+    "nodemailer": "^4.6.8",
+    "restify": "^7.2.1"
+  }
+}
