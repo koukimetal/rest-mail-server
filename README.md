@@ -1,16 +1,26 @@
 # REST Server to send emails (Currently it supports only Gmail API)
 
 ## How to set up
-Get gmail API token.
-https://developers.google.com/gmail/api/quickstart/nodejs
-Download `credentials.json` put it under `secret`.
-Run `npm run setup`
-You are given a URL. Go there copy a value and paste to console.
-You will get `secret/token.json`
+
+1. Get gmail API token.
+    1. Go to https://developers.google.com/gmail/api/quickstart/nodejs
+    2. Download `credentials.json`
+    3. Create `./secret` and put it under the directory.
+2. Set up node environment
+    1. Run `npm install`
+    2. Create `.env` here with `PROJECT_ROOT` and `SERVER_PORT`. For example,
+        ```
+            echo "PROJECT_ROOT=`pwd`" >> ".env" && echo "SERVER_PORT=18184" >> ".env"
+        ```
+3. Set up credential
+    1. Run `npm run setup`
+    2. You are given a URL. Go there and copy a value and paste it to a terminal.
+    3. You will get `secret/token.json`
 
 ## Send email
-Run `npm start` to start a server.
 
+1. Run `npm start` to start a server.
+2. Send POST request to the server. For example,
 ```
 curl --header "Content-Type: application/json" \
   --request POST \

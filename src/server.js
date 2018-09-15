@@ -1,6 +1,6 @@
 const restify = require('restify');
+require('dotenv').config();
 const mail = require('./mail');
-const PORT = 18184;
 
 const sendEmail = async (req, res, next) => {
     const {from, to, subject, text, options} = req.body;
@@ -21,6 +21,6 @@ server.use(restify.plugins.bodyParser({
     mapParams: true
 }));
 
-server.listen(PORT, () => {
+server.listen(process.env.SERVER_PORT, () => {
     console.log('%s listening at %s', server.name, server.url);
 });

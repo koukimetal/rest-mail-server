@@ -29,8 +29,9 @@ const SCOPES = [
     'https://www.googleapis.com/auth/gmail.compose',
     'https://www.googleapis.com/auth/gmail.send'
 ];
-const TOKEN_PATH = path.resolve(__dirname, '../secret', 'token.json');
-const CREDENTIAL_PATH = path.resolve(__dirname, '../secret', 'credentials.json');
+
+const TOKEN_PATH = path.resolve(process.env.PROJECT_ROOT, './secret', 'token.json');
+const CREDENTIAL_PATH = path.resolve(process.env.PROJECT_ROOT, './secret', 'credentials.json');
 
 // Load client secrets from a local file.
 const getAuthClient = () => {
